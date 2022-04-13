@@ -7,7 +7,7 @@ CREATE DATABASE peliculas;
 
 -- 2. Cargar ambos archivos a su tabla correspondiente. (1 Punto)
 CREATE TABLE peliculas( 
-    id SERIAL, 
+    id SERIAL, --serial aumenta de uno en uno
     Pelicula VARCHAR(100),
     Año_estreno INT,
     Director VARCHAR(50),
