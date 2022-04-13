@@ -40,7 +40,9 @@ SELECT Pelicula FROM peliculas WHERE Año_estreno BETWEEN 1990 AND 1999 ORDER BY
 
 -- 7. Hacer una consulta SQL que muestre los títulos con su longitud, la longitud debe ser
 -- nombrado para la consulta como “longitud_titulo”. (1 punto)
-
+SELECT Pelicula, LENGTH(Pelicula) AS longitud_titulo FROM peliculas LIMIT 10; 
 
 -- 8. Consultar cual es la longitud más grande entre todos los títulos de las películas.
 -- (2 punto)
+-- SELECT MAX(LENGTH(Pelicula)) FROM peliculas; --esta no da el nombre de la peli
+SELECT Pelicula, LENGTH(Pelicula) AS longitud_titulo FROM peliculas WHERE LENGTH(Pelicula) = (SELECT MAX(LENGTH(Pelicula)) FROM peliculas);
